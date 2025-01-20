@@ -9,29 +9,37 @@
             background-color: lightcoral;
 
             display: flex;
-            flex-flow: row wrap;
-            align-items: flex-start;
-            height: 400px;
+            flex-flow: row nowrap;
         }
 
         div.item {
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
-            padding: 40px;
+            flex-basis: 300px;
         }
 
+        div#cxA {
+             flex-shrink: 0;
+             flex-grow: 3;   
+        }
+
+        div#cxB {
+            flex-shrink: 2;
+            flex-grow: 1;
+        }
+
+        div#cxC {
+            flex-shrink: 4;
+            flex-grow: 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item" id="i1">A</div>
-        <div class="item" id="i2">B</div>
-        <div class="item" id="i3">C</div>
-        <div class="item" id="i4">D</div>
-        <div class="item" id="i5">E</div>
-        <div class="item" id="i6">F</div>
-        <div class="item" id="i7">G</div>
+        <div class="item" id="cxA">B</div>
+        <div class="item" id="cxB">A</div>
+        <div class="item" id="cxC">C</div>
     </div>
 </body>
 </html>
